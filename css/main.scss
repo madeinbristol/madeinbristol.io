@@ -15,11 +15,19 @@ body, html{
   width: 100%;
   display: table;
   font-family: 'Merriweather', serif;
+  line-height: 1.6;
 }
-
 
 center{
   display: table-cell;
   vertical-align: middle;
   height: 100%;
+}
+
+.para{
+  color: #666;
+}
+
+footer{
+  color: #ccc;
 }
