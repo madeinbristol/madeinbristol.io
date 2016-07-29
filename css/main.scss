@@ -4,30 +4,25 @@
 @charset "utf-8";
 
 a{
-  color: #0078e7;
+  // color: orange;
   &:hover{
     text-decoration: none;
   }
 }
 
 body, html{
-  height: 100%;
-  width: 100%;
-  display: table;
-  font-family: 'Merriweather', serif;
   line-height: 1.6;
+  font-size: 1.2em;
+  font-family: serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
 
-center{
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-}
-
-.para{
-  color: #666;
-}
-
-footer{
-  color: #ccc;
+[role=main]{
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 60px;
 }
