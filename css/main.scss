@@ -4,13 +4,14 @@
 @charset "utf-8";
 
 a{
-  // color: orange;
+  color: orange;
   &:hover{
     text-decoration: none;
   }
 }
 
 body, html{
+  background: #ffffd7;
   line-height: 1.6;
   font-size: 1.2em;
   font-family: serif;
