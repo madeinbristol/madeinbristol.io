@@ -1,0 +1,22 @@
+/* Text-Related Elements */ 
+p {
+	margin-bottom: $space;
+}
+
+/* Blockquote */
+blockquote {
+
+}
+
+/* Horizontal Rule */ 
+hr {
+	border: 0;
+    height: 2px;
+    background: $color-main;
+    margin: $space 0px;
+}
+
+abbr {
+    border-bottom: 1px dotted $color-main;
+    cursor: help;
+}

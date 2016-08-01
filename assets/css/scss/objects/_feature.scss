@@ -1,0 +1,400 @@
+/* Feature */
+$reveal-time: 1.5s;
+$sketch-ink_time:1.5s;
+$sketch-ink_delay: 3s;
+$blot-time:3s;
+$blot-delay:2s;
+
+@mixin maskanim($anim, $maskuri, $speed, $frames, $delay) {
+	$maskwidthpcnt : $frames*100%;
+	$steps : $frames - 1;
+	display:block;
+	
+	-webkit-mask: url($maskuri);
+	-webkit-mask-size: $maskwidthpcnt 100%;
+	-webkit-mask-position: 100% 0;
+	-webkit-animation: $anim $speed $delay steps($steps) both;
+
+	mask: url($maskuri);
+	mask-size: $maskwidthpcnt 100%;
+	mask-position: 100% 0;
+	animation: $anim $speed $delay steps($steps) both;
+}
+
+.feature{
+	display:block;
+	position:relative;
+	height:100vh;
+	min-height: 100vh;
+	background:url(/assets/img/bg.jpg);
+	background-position:center center;
+    background-size:cover;
+    box-shadow: inset 0 0 50vw rgb(71, 55, 45);
+    overflow: hidden;
+    &.active{
+    	height:auto;
+    }
+	&__photo-overlay{
+		height:100vh;
+		width:100vw;
+		position: absolute;
+		background:url(/assets/img/bridge_photo.jpg);
+		.webp &{
+			background:url(/assets/img/webp/bridge_photo.webp);
+		}
+		background-position:center center;
+    	background-size:cover;
+    	z-index:1;
+    	box-shadow: inset 0 0 50vw #47372d;
+    	transform: translate3d(0, 0, 0) ;
+    	-webkit-transform: translate3d(0, 0, 0);
+    	// transform: scale(3,3) translate(0%,-25%) rotate(5deg);
+    	// -webkit-transform: scale(4,4) translate(0%,-25%) rotate(5deg);
+    	// -moz-transform: scale(4,4) translate(0%,-25%) rotate(5deg);
+    	// -o-transform: scale(4,4) translate(0%,-25%) rotate(5deg);
+    	// transition: 2s ease-out;
+    	// -webkit-transition: 2s ease-out;
+	    // -moz-transition: 2s ease-out;
+	    // -o-transition: 2s ease-out;
+    	.active &{
+    		// transition: 2s ease-out;
+    		// -webkit-transition: 2s ease-out;
+	     	// -moz-transition: 2s ease-out;
+	     	// -o-transition: 2s ease-out;
+    		// transform: scale(1,1) translate(0%,0%) rotate(0deg);
+    		// -webkit-transform: scale(1,1) translate(0%,0%) rotate(0deg);
+    		// -moz-transform: scale(1,1) translate(0%,0%) rotate(0deg);
+    		// -o-transform: scale(1,1) translate(0%,0%) rotate(0deg);
+    		transform: translate3d(0, 0, 0) ;
+    	    -webkit-transform: translate3d(0, 0, 0);
+    		@include maskanim( mask, '/assets/img/explodiness.png', $reveal-time, 31, 1s);
+    		.webp &{
+    			@include maskanim( mask, '/assets/img/webp/explodiness.webp', $reveal-time, 31, 1s);
+    		}
+    		pointer-events: none;
+        }
+	}
+	&__sketch-overlay{
+		height:100vh;
+		width:100vw;
+		position: absolute;
+		background:url(/assets/img/sketch.png);
+		background-position:center center;
+    	background-size:cover;
+    	opacity: 0.75;
+	}
+	&__ink-blots{
+		height:100vh;
+		width:100vw;
+		left:0em;
+		top:0em;
+		position: absolute;
+		opacity:0;
+		.active &{
+			opacity:0.5;
+		}
+		&__brown{
+			
+			&__blot{
+				
+				position:absolute;
+				display:block;
+				height:auto;
+				background-color:#533e30;
+				//box-shadow: inset 0 0 17vw #fb5100;
+				box-shadow: inset 0 0 17vw rgba(251, 81, 0, 0.57);
+				opacity: 0.2;
+				&--one{
+				    padding-top: 43%;
+				    width: 53%;
+				    left: -14%;
+				    top: -15%;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim12.png', $blot-time, 56, 3.2s);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim12.webp', $blot-time, 56, 3.2s);
+						}
+					}
+				}
+				&--two{
+				    padding-top: 43%;
+				    width: 53%;
+				    right: 8%;
+				    bottom: -43%;
+				    opacity: 0.28;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim12.png', $blot-time, 56, 4.7s);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim12.webp', $blot-time, 56, 4.7s);
+						}
+					}
+				}
+				&--three{
+				    padding-top: 45%;
+				    width: 41%;
+				    right: -8%;
+				    bottom: 60%;
+				    opacity: 0.22;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim32.png', $blot-time, 46, 5s);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim32.webp', $blot-time, 46, 5s);
+						}
+					}
+				}
+			}
+		}
+		&__blue{
+
+			&__blot{
+				
+				position:absolute;
+				display:block;
+				height:auto;
+				background-color:#000;
+				//box-shadow: inset 0 0 17vw #0008fb;
+				box-shadow: inset 0 0 17vw rgba(0, 8, 251, 0.6);
+				&--one{
+				    padding-top: 45%;
+				    width: 40%;
+				    left: -10.5%;
+				    top: 23%;
+				    opacity: 0.16;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim22.png', $blot-time, 22, 4.2s);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim22.webp', $blot-time, 22, 4.2s);
+						}
+					}
+				}
+				&--two{
+				    padding-top: 44%;
+				    width: 40%;
+				    right: -8%;
+				    bottom: -12%;
+				    opacity: 0.15;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim22.png', $blot-time, 22, 3.5s);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim22.webp', $blot-time, 22, 3.5s);
+						}
+					}
+				}
+				&--three{
+				    padding-top: 49%;
+				    width: 42%;
+				    left: -19%;
+				    bottom: -22%;
+				    opacity: 0.18;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim32.png', $blot-time, 46, 3.7s);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim32.webp', $blot-time, 46, 3.7s);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__sketch-ink-blots{
+		height:100vh;
+		width:100vw;
+		left:0em;
+		top:0em;
+		position: absolute;
+		-webkit-mask: url(/assets/img/sketch-blot1.png);
+		-webkit-mask-size: cover;
+		-webkit-mask-position: center center;
+		mask: url(/assets/img/sketch-blot1.png);
+		.webp &{
+			-webkit-mask: url(/assets/img/webp/sketch-blot1.webp);
+			mask: url(/assets/img/webp/sketch-blot1.webp);
+		}
+		mask-size: cover;
+		mask-position: center center;
+		opacity:0;
+		.active &{
+			opacity:0.5;
+		}
+		&__sketch-ink{
+			&__blot{
+				position:absolute;
+				display:block;
+				height:auto;
+				background-color:#000;
+				//box-shadow: inset 0 0 17vw #0008fb;
+				box-shadow: inset 0 0 17vw rgba(10, 18, 251, 0.6);
+				&--one{
+				    padding-top: 51%;
+				    width: 51%;
+				    left: 22.5%;
+				    top: -17%;
+				    opacity: 0.25;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim12.png', $sketch-ink_time, 56, $sketch-ink_delay);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim12.webp', $sketch-ink_time, 56, $sketch-ink_delay);
+						}
+					}
+				}
+				&--two{
+				    padding-top: 51%;
+				    width: 51%;
+				    left: 4%;
+				    bottom: -12%;
+				    opacity: 0.4;
+				    background-color: #0f1b31;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim12.png', $sketch-ink_time, 56, $sketch-ink_delay);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim12.webp', $sketch-ink_time, 56, $sketch-ink_delay);
+						}
+					}
+				}
+				&--three{
+				    padding-top: 49%;
+				    width: 42%;
+				    left: -8%;
+				    top: 3%;
+				    opacity: 0.45;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim22.png', $sketch-ink_time, 22, $sketch-ink_delay);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim22.webp', $sketch-ink_time, 22, $sketch-ink_delay);
+						}
+					}
+				}
+				&--four{
+				    padding-top: 49%;
+				    width: 42%;
+				    left: -11%;
+				    bottom: -14%;
+				    opacity: 0.15;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim22.png', $sketch-ink_time, 22, $sketch-ink_delay);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim22.webp', $sketch-ink_time, 22, $sketch-ink_delay);
+						}
+					}
+				}
+				&--five{
+				    padding-top: 49%;
+				    width: 42%;
+				    left: -25%;
+				    bottom: 7%;
+				    opacity: 0.4;
+					.active &{
+						@include maskanim( mask-reverse, '/assets/img/anim32.png', $sketch-ink_time, 46, $sketch-ink_delay);
+						.webp &{
+							@include maskanim( mask-reverse, '/assets/img/webp/anim32.webp', $sketch-ink_time, 46, $sketch-ink_delay);
+						}
+					}
+				}
+			}
+		}
+	}
+	// &__sketch-ink-overlay{
+	// 	height:100vh;
+	// 	width:100vw;
+	// 	position: absolute;
+	// 	&--brown{
+
+	// 	}
+	// 	&--blue{
+
+	// 	}
+	// }
+	&__calculations{
+		height:100vh;
+		width:100vw;
+		position: absolute;
+		&__item{
+			width:100%;
+			height:100%;
+			position: absolute;
+			background-repeat:no-repeat;
+			background-size: contain;
+    		background-position: center;
+			&--one{
+				-webkit-animation: calc_float 3s ease-in-out infinite alternate;
+    			animation: calc_float 3s ease-in-out infinite alternate;
+				background-image: url(/assets/img/calculations1.png);
+				.webp &{
+					background-image: url(/assets/img/webp/calculations1.webp);
+				}
+			}
+			&--two{
+				-webkit-animation: calc_float_two 3s ease-in-out infinite alternate;
+    			animation: calc_float_two 3s ease-in-out infinite alternate;
+				background-image: url(/assets/img/calculations2.png);
+				.webp &{
+					background-image: url(/assets/img/webp/calculations2.webp);
+				}
+			}
+			&--three{
+				-webkit-animation: calc_float 3s ease-in-out infinite alternate;
+    			animation: calc_float 3s ease-in-out infinite alternate;
+				background-image: url(/assets/img/calculations3.png);
+				.webp &{
+					background-image: url(/assets/img/webp/calculations3.webp);
+				}
+			}
+			&--four{
+				-webkit-animation: calc_float_three 3s ease-in-out infinite alternate;
+    			animation: calc_float_three 3s ease-in-out infinite alternate;
+				background-image: url(/assets/img/calculations4.png);
+				.webp &{
+					background-image: url(/assets/img/webp/calculations4.webp);
+				}
+			}
+			&--five{
+				-webkit-animation: calc_float_two 3s ease-in-out infinite alternate;
+    			animation: calc_float_two 3s ease-in-out infinite alternate;
+				background-image: url(/assets/img/calculations5.png);
+				.webp &{
+					background-image: url(/assets/img/webp/calculations5.webp);
+				}
+			}
+		}
+	}
+	&__logo{
+		@extend .ir;
+	    background-image: url(/assets/img/madeinbristol.svg);
+	    display: block;
+	    position: relative;
+	    margin: 0 auto;
+	    font-size: 11.6em;
+	    width: 100%;
+	    height: 0em;
+    	padding-top: 86%;
+	    position: relative;
+	    left: -9%;
+	}
+	&__content{
+		display:block;
+		position:relative;
+		margin: 0 auto;
+		padding:2.5em;
+		padding-top: 14%;
+		width:100%;
+		max-width: 28em;
+		// top: calc(50% + 5em);
+	 //    -webkit-transform: translateY(-50%);
+	 //    -ms-transform: translateY(-50%);
+	 //        transform: translateY(-50%);
+	    text-align: center;
+	}
+	&__para{
+    	margin-top: 1.7em;
+    	text-shadow: 0em 0em 0.3em #ccaf86, 0em 0em 0.3em #ccaf86, 0em 0em 0.3em #ccaf86, 0em 0em 0.3em #ccaf86;
+	}
+	&__social{
+		color:$color-main;
+		a{
+			color:inherit;
+			&:hover{
+				color:#fff;
+			}
+		}
+	}
+}

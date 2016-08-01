@@ -1,24 +1,60 @@
 ---
 layout: default
 ---
+  <div id="preload-imgs" style="position:absolute; left:-9999px; width:1px; height:1px;">
+    <img src="/assets/img/webp/explodiness.webp"/>
+    <img src="/assets/img/webp/anim12.webp"/>
+    <img src="/assets/img/webp/anim22.webp"/>
+    <img src="/assets/img/webp/anim32.webp"/>
+    <img src="/assets/img/webp/sketch-blot1.webp"/>
+    <img src="/assets/img/bg.jpg"/>
+    <img src="/assets/img/madeinbristol.svg"/>
+    <img src="/assets/img/webp/calculations1.webp"/>
 
-  <center>
+  </div>
+  <div class="feature">
+    <div class="feature__photo-overlay">
+    </div>
+    <div class="feature__sketch-overlay">
+    </div>
+    <div class="feature__ink-blots">
+        <div class="feature__ink-blots__brown__blot feature__ink-blots__brown__blot--one"></div>
+        <div class="feature__ink-blots__brown__blot feature__ink-blots__brown__blot--two"></div>
+        <div class="feature__ink-blots__blue__blot feature__ink-blots__blue__blot--one"></div>
+        <div class="feature__ink-blots__blue__blot feature__ink-blots__blue__blot--two"></div>
+        <div class="feature__ink-blots__blue__blot feature__ink-blots__blue__blot--three"></div>
+        <div class="feature__ink-blots__brown__blot feature__ink-blots__brown__blot--three"></div>
+    </div>
+    <div class="feature__sketch-ink-blots">
+        <div class="feature__sketch-ink-blots__sketch-ink__blot feature__sketch-ink-blots__sketch-ink__blot--one"></div>
+        <div class="feature__sketch-ink-blots__sketch-ink__blot feature__sketch-ink-blots__sketch-ink__blot--two"></div>
+        <div class="feature__sketch-ink-blots__sketch-ink__blot feature__sketch-ink-blots__sketch-ink__blot--three"></div>
+        <div class="feature__sketch-ink-blots__sketch-ink__blot feature__sketch-ink-blots__sketch-ink__blot--four"></div>
+        <div class="feature__sketch-ink-blots__sketch-ink__blot feature__sketch-ink-blots__sketch-ink__blot--five"></div>
+    </div>
+    <div class="feature__sketch-ink-overlay"></div>
+    <div class="feature__calculations">
+      <div class="feature__calculations__item feature__calculations__item--one"></div>
+      <div class="feature__calculations__item feature__calculations__item--two"></div>
+      <div class="feature__calculations__item feature__calculations__item--three"></div>
+      <div class="feature__calculations__item feature__calculations__item--four"></div>
+      <div class="feature__calculations__item feature__calculations__item--five"></div>
+    </div>--
+    <div class="feature__content">
+      <h1 class="feature__logo">Made in Bristol</h1>
+      <p class="feature__para">Informal front end developer meet-up in Bristol, UK.<br>
+        Talking CSS, HTML, Javascript, SASS, LESS,<br>
+        BEM, UX, Web Design and the digital process.<br>
+        <em>All levels welcome.</em>
+      </p>
+      <div class="form-container">
+        {% include signup.html %}
+      </div>
+      <div class="feature__social">
+        <a href="https://github.com/madeinbristol">Github</a> | <a href="https://twitter.com/madeinbris">Twitter</a> | <a href="http://meetup.com/made-in-bristol">Meetup</a> | <a href="https://soundcloud.com/user-546057915">Soundcloud</a>
+      </div>
+    </div>
+  </div>
+    
 
-    {% include crown.svg %}
 
-    <h1>Made in Bristol</h1>
-
-    <p class="para">Informal front end developer meet-up in Bristol, UK.<br>
-      Talking CSS, HTML, Javascript, SASS, LESS,<br>
-      BEM, UX, Web Design and the digital process.<br>
-      <em>All levels welcome.</em></p>
-
-    {% include signup.html %}
-
-    <footer>
-      <a href="https://github.com/madeinbristol">Github</a> |
-      <a href="https://twitter.com/madeinbris">Twitter</a> |
-      <a href="http://meetup.com/made-in-bristol">Meetup</a>
-    </footer>
-
-  </center>

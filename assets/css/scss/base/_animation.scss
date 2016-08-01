@@ -1,0 +1,136 @@
+//animations
+
+// explosion
+@keyframes mask {
+    from {
+        -webkit-mask-position: 100% 0;
+        -moz-mask-position: 100% 0;
+        -ms-mask-position: 100% 0;
+        -o-mask-position: 100% 0;
+        mask-position: 100% 0;
+        
+    }
+    to {
+        -webkit-mask-position: 0 0;
+        -moz-mask-position: 0 0;
+        -ms-mask-position: 0 0;
+        -o-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+@keyframes mask-reverse {
+    from {
+        -webkit-mask-position: 0 0;
+        -moz-mask-position: 0 0;
+        -ms-mask-position: 0 0;
+        -o-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        -moz-mask-position: 100% 0;
+        -ms-mask-position: 100% 0;
+        -o-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+$calc_float1Y:3px;
+$calc_float1X:2px;
+
+@keyframes calc_float {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        -moz-transform: translateY(0) translateX(0);
+        -o-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        -webkit-transform: translateY($calc_float1Y) translateX($calc_float1X);
+        -moz-transform: translateY($calc_float1Y) translateX($calc_float1X);
+        -o-transform: translateY($calc_float1Y) translateX($calc_float1X);
+        transform: translateY($calc_float1Y) translateX($calc_float1X);
+    }
+}
+
+@-webkit-keyframes calc_float {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        -moz-transform: translateY(0) translateX(0);
+        -o-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        -webkit-transform: translateY($calc_float1Y) translateX($calc_float1X);
+        -moz-transform: translateY($calc_float1Y) translateX($calc_float1X);
+        -o-transform: translateY($calc_float1Y) translateX($calc_float1X);
+        transform: translateY($calc_float1Y) translateX($calc_float1X);
+    }
+}
+
+$calc_float2Y:1px;
+$calc_float2X:2px;
+
+@keyframes calc_float_two {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        -moz-transform: translateY(0) translateX(0);
+        -o-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        -webkit-transform: translateY($calc_float2Y) translateX($calc_float2X);
+        -moz-transform: translateY($calc_float2Y) translateX($calc_float2X);
+        -o-transform: translateY($calc_float2Y) translateX($calc_float2X);
+        transform: translateY($calc_float2Y) translateX($calc_float2X);
+    }
+}
+
+@-webkit-keyframes calc_float_two {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        -moz-transform: translateY(0) translateX(0);
+        -o-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        -webkit-transform: translateY($calc_float2Y) translateX($calc_float2X);
+        -moz-transform: translateY($calc_float2Y) translateX($calc_float2X);
+        -o-transform: translateY($calc_float2Y) translateX($calc_float2X);
+        transform: translateY($calc_float2Y) translateX($calc_float2X);
+    }
+}
+
+$calc_float3Y:1px;
+$calc_float3X:3px;
+
+@keyframes calc_float_three {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        -moz-transform: translateY(0) translateX(0);
+        -o-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        -webkit-transform: translateY($calc_float3Y) translateX($calc_float3X);
+        -moz-transform: translateY($calc_float3Y) translateX($calc_float3X);
+        -o-transform: translateY($calc_float3Y) translateX($calc_float3X);
+        transform: translateY($calc_float3Y) translateX($calc_float3X);
+    }
+}
+
+@-webkit-keyframes calc_float_three {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        -moz-transform: translateY(0) translateX(0);
+        -o-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        -webkit-transform: translateY($calc_float3Y) translateX($calc_float3X);
+        -moz-transform: translateY($calc_float3Y) translateX($calc_float3X);
+        -o-transform: translateY($calc_float3Y) translateX($calc_float3X);
+        transform: translateY($calc_float3Y) translateX($calc_float3X);
+    }
+}

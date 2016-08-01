@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+.form{
+	font-family:$font;
+	label{
+		    text-shadow: 0em 0em 0.3em #ccaf86, 0em 0em 0.3em #ccaf86, 0em 0em 0.3em #ccaf86, 0em 0em 0.3em #ccaf86;
+	}
+	input{
+		outline: none;
+	    box-shadow: 0px 0px 1.2em rgba(71, 55, 45, 0.36), inset 0px 0px 0.3em rgba(71, 55, 45, 0.37);
+	    border: none;
+	    padding: 0.7em 0.8em;
+	    background-color: rgba(176,150,112,0.27);
+	    color: $color-main;
+	    border-radius:0.2em;
+	    font-family:$font;
+	    margin: 0em 0.5em 1.2em;
+	}
+	input[type=email]{
+		width:100%;
+		max-width: 15.6em;
+	}
+	input[type=submit]{
+		background-color: #47372d;
+	    color: #ccb38f;
+	    font-family: "IM_Fell_English",serif;
+	    padding: 0.86em 0.9em 0.8em;
+	    text-transform: uppercase;
+	    font-size: 0.8em;
+	    box-shadow: 0px 0px 1.2em rgba(71,55,45,0.36), inset 0em 0em 2.4em rgba(15, 27, 49, 0.23);
+	    vertical-align: 0.1em;
+	    opacity: 0.85;
+	    -webkit-transition: 0.15s ease-out;
+	    -moz-transition: 0.15s ease-out;
+	    -o-transition: 0.15s ease-out;
+	    &:hover, &:focus{
+	    	opacity:1;
+	    	-webkit-transition: 0.15s ease-out;
+	    	-moz-transition: 0.15s ease-out;
+	    	-o-transition: 0.15s ease-out;
+	    }
+	    &:active{
+	    	transform:scale(0.975);
+	    }
+	}
+	p{
+		margin:0em;
+		&:first-child{
+			margin-bottom:1em;
+		}
+	}
+}
+
+
+
+/* placeholder styling */
+
+@mixin placeholder() {
+ 	color:$color-main;
+ 	font-family:$font;
+}
+*::-ms-input-placeholder{
+	@include placeholder();
+}
+*::-moz-placeholder{
+	@include placeholder();
+}
+*::-moz-placeholder{
+	@include placeholder();
+}
+*::-webkit-input-placeholder {
+	@include placeholder();
+}
+
+
+
