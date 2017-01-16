@@ -1,0 +1,29 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+a{
+  // color: orange;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+body, html{
+  // background: #ffffd7;
+  line-height: 1.6;
+  font-size: 1.2em;
+  font-family: serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+[role=main]{
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 60px;
+}
