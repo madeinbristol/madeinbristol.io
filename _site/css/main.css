@@ -1,0 +1,15 @@
+a:hover {
+  text-decoration: none; }
+
+body, html {
+  line-height: 1.6;
+  font-size: 1.2em;
+  font-family: serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[role=main] {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 60px; }
